@@ -1,9 +1,12 @@
 asgiref==3.7.2
 certifi==2023.5.7
 charset-normalizer==3.1.0
+dj-database-url==2.0.0
 Django==4.2.2
 django-environ==0.10.0
+gunicorn==21.2.0
 idna==3.4
+packaging==23.1
 psycopg==3.1.9
 psycopg2-binary==2.9.6
 python-decouple==3.8
@@ -11,4 +14,3 @@ requests==2.31.0
 sqlparse==0.4.4
 typing_extensions==4.7.0
 urllib3==2.0.3
-gunicorn==19.7.1

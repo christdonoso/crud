@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns #agregado
 from crud_app import views
 
 
@@ -29,3 +30,5 @@ urlpatterns = [
     path('inicio_test', views.inicio_test, name='inicio'),
     path('acerca_test', views.acerca_test),
 ]
+
+urlpatterns += staticfiles_urlpatterns() #agregado
