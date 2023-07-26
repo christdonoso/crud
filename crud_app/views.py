@@ -24,8 +24,11 @@ def ver_persona(request, id):
     persona = Persona.objects.get(id=id)
     return render(request, 'editar.html', {'persona':persona})
 
+
 def editar_persona(request):
-    persona = Persona.objects.filter(id = request.POST['id'])
+    print(request.POST)
+    p = request.POST['id']
+    persona = Persona.objects.filter(id = p)
     peso = request.POST['peso']
     talla = request.POST['talla']
     persona.update(
@@ -36,12 +39,13 @@ def editar_persona(request):
 
 
 def eliminar(request, id):
-    Persona.objects.filter(id = id).delete()
+    Persona.objects.get(id = id).delete()
     return redirect('/')
 
 
 def inicio_test(request):
     return render(request, 'inicio_test.html')
+
 
 def acerca_test(request):
     return render(request, 'acerca.html')
